@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFundActivity">
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
+    <TextView
+        android:id="@+id/selectFundType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Select fund type"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/selectFundType"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:drawable/btn_dropdown"/>
+
+    <TextView
+        android:id="@+id/textView83"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:text="Name:"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textView86"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="250dp"
+        android:gravity="center"
+        android:text="Amount:"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textView87"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="300dp"
+        android:gravity="center"
+        android:text="Month:"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextPhone2"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/editTextPhone3"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="450dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Submit"
+        android:textAllCaps="true"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/error6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="393dp"
+        android:layout_marginEnd="101dp"
+        android:textColor="#FF0000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView89"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="151dp"
+        android:text="3% profit"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>
