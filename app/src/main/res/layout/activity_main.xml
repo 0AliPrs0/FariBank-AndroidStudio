@@ -1,199 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/login_background"
+    tools:context="ir.ac.kntu.MainActivity">
 
-    <ImageView
-        android:id="@+id/background"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/background" />
-
-    <ImageView
-        android:id="@+id/fari_logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fari_logo" />
-
-    <TextView
-        android:id="@+id/phoneNumber"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Phone number :"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textColorLink="#EA1616"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/passWord"
-        app:layout_constraintEnd_toStartOf="@+id/phone_number"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fari_logo"
-        app:layout_constraintVertical_chainStyle="spread" />
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
-    <EditText
-        android:id="@+id/phone_number"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:background="@drawable/rounded_corner"
-        android:ems="10"
-        android:gravity="center"
-        android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/phoneNumber"
-        app:layout_constraintTop_toBottomOf="@+id/fari_logo" />
+        <TextView
+            android:layout_width="211dp"
+            android:layout_height="20dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="1dp"
+            android:textSize="15sp"
+            android:text="Fari Bank"
+            android:textColor="#611212" />
 
-    <TextView
-        android:id="@+id/passWord"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:text="Password :"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/login"
-        app:layout_constraintEnd_toStartOf="@+id/password"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
+        <ImageView
+            android:id="@+id/account"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/account"
+            tools:layout_editor_absoluteX="111dp"
+            tools:layout_editor_absoluteY="112dp" />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:background="@drawable/rounded_corner"
-        android:ems="10"
-        android:gravity="center"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/passWord"
-        app:layout_constraintTop_toBottomOf="@+id/phone_number" />
+        <EditText
+            android:id="@+id/Username"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/rectangle"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:padding="18dp"
+            android:textColorHint="@color/white"
+            android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/login"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/Password"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/rectangle"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
+                android:padding="18dp"
+                tools:ignore="TextFields" />
+
+            <ImageButton
+                android:id="@+id/showPasswordButton"
+                android:layout_width="88dp"
+                android:layout_height="58dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="14dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/show_password"
+                android:src="@drawable/show_password" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/success"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.12" />
+
+        <Button
+            android:id="@+id/login"
+            android:backgroundTintMode="screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle"
+            android:textColor="#C4C6D3"
+            android:text="Login"
+            android:padding="18dp"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:layout_marginTop="1dp" />
+
+        <Button
+            android:id="@+id/signup"
+            android:backgroundTint="#A63C35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle"
+            android:textColor="#C4C6D3"
+            android:text="Signup"
+            android:padding="18dp"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:layout_marginTop="3dp" />
+
+
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#cccccc"
-        android:text="Login"
-        android:textAllCaps="true"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/background"
-        app:layout_constraintTop_toTopOf="@+id/background"
-        app:layout_constraintVertical_bias="0.499" />
+        android:textColor="@color/white"
+        android:text="@string/contact"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="563dp" />
 
-    <Button
-        android:id="@+id/sign_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:backgroundTint="#cccccc"
-        android:text="Sign up"
-        android:textAllCaps="true"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
 
-    <TextView
-        android:id="@+id/error_massage"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up"
-        app:layout_constraintVertical_bias="0.12" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="1dp">
 
-    <ImageView
-        android:id="@+id/email"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/telegram"
-        app:layout_constraintEnd_toStartOf="@+id/email_text"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toEndOf="@+id/background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/error_massage"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:srcCompat="@drawable/gmail" />
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/gmail" />
 
-    <TextView
-        android:id="@+id/email_text"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:gravity="center"
-        android:text="amirhosseinb1606@gmail.com"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/telegram_id"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/email"
-        app:layout_constraintTop_toBottomOf="@+id/error_massage"
-        app:layout_constraintVertical_chainStyle="packed" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:textIsSelectable="true"
+                    android:padding="10dp"
+                    android:text="@string/gmail"
+                    android:textColor="@color/white" />
 
-    <ImageView
-        android:id="@+id/telegram"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/background"
-        app:layout_constraintEnd_toStartOf="@+id/telegram_id"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toEndOf="@+id/background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        app:srcCompat="@drawable/telegram" />
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/telegram_id"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:gravity="center"
-        android:text="Amir_16b"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/telegram"
-        app:layout_constraintTop_toBottomOf="@+id/email_text" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="1dp"
+                tools:ignore="UseCompoundDrawables">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="300dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="20dp"
-        android:text="powered by Amir Hossein Bagheri"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/background"
-        app:layout_constraintStart_toStartOf="parent" />
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/telegram" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:padding="10dp"
+                    android:textIsSelectable="true"
+                    android:text="@string/telegram_id"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="1dp"
+            android:text="@string/powered"
+            android:textColor="#111313"
+            android:textSize="15sp"
+            tools:ignore="RtlHardcoded,SmallSp,TextSizeCheck" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

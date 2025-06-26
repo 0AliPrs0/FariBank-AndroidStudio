@@ -1,169 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardActivity">
+    android:background="@drawable/dashboard_background"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="ir.ac.kntu.DashBoardActivity">
 
-    <ImageView
-        android:id="@+id/backgroundImage"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/background" />
-
-    <ImageView
-        android:id="@+id/contacts"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/homeButton"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/setting"
-        app:srcCompat="@drawable/contact" />
-
-    <ImageView
-        android:id="@+id/homeButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/transfer"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/contacts"
-        app:srcCompat="@drawable/home" />
-
-    <ImageView
-        android:id="@+id/setting"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/contacts"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/backgroundImage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/setting" />
-
-    <ImageView
-        android:id="@+id/transfer"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/loan"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/homeButton"
-        app:srcCompat="@drawable/transfer" />
-
-    <ImageView
-        android:id="@+id/loan"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/transfer"
-        app:srcCompat="@drawable/loan" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card"
-        android:layout_width="280dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="100dp"
-        app:cardBackgroundColor="#999999"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="800dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/toppingUp"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/funds"
-        app:layout_constraintTop_toTopOf="@+id/backgroundImage">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
 
         <ImageView
-            android:id="@+id/imageView12"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            app:srcCompat="@drawable/fari_logo" />
+            android:src="@drawable/fari_logo"
+            android:layout_marginEnd="16dp"/>
 
         <TextView
-            android:id="@+id/fullName"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:id="@+id/name"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="TextView" />
+            android:textColor="#14C7DD"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="64dp"
+            android:layout_height="68dp"
+            android:layout_gravity="end"
+            android:layout_marginStart="10dp"
+            app:srcCompat="@drawable/logout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="393dp"
+        android:layout_height="46dp"
+        android:gravity="left"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:text="Account number: "
+            android:textColor="#9729AA"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/account_number"
+            android:textIsSelectable="true"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:gravity="left"
+            android:textColor="#A38016"
+            android:textSize="30sp"
+            tools:ignore="RtlHardcoded" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/balance"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Balance: "
+            android:textColor="#276A9F"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/amount_money"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
             android:gravity="center"
-            android:text="TextView"
-            android:textSize="18sp" />
+            android:textColor="#0EA314"
+            android:textSize="20sp" />
 
         <ImageView
-            android:id="@+id/cardButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alpha="0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/background" />
-    </androidx.cardview.widget.CardView>
+            android:id="@+id/charge_account"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="100dp"
+            app:srcCompat="@drawable/charge_account" />
 
-    <ImageView
-        android:id="@+id/funds"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="@+id/card"
-        app:layout_constraintEnd_toStartOf="@+id/card"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/backgroundImage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card"
-        app:srcCompat="@drawable/fund" />
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/toppingUp"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="@+id/card"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/card"
-        app:layout_constraintTop_toBottomOf="@+id/card"
-        app:srcCompat="@drawable/plus" />
 
-    <ImageView
-        android:id="@+id/logout"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logout" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/transactions"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/rounded_corner"
-        app:layout_constraintBottom_toBottomOf="@+id/backgroundImage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/card" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="400dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/contact"
+            android:layout_width="78dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/contact"
+            android:layout_marginEnd="16dp" />
+
+        <ImageView
+            android:id="@+id/loan"
+            android:layout_width="78dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/loan"
+            android:layout_marginEnd="16dp" />
+
+        <ImageView
+            android:id="@+id/fund"
+            android:layout_width="78dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/fund"
+            android:layout_marginEnd="16dp" />
+
+        <ImageView
+            android:id="@+id/transfer"
+            android:layout_width="78dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/transfer"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

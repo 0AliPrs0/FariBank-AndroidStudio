@@ -6,23 +6,34 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/fari_logo"
+        android:label="@string/fari_bank"
+        android:roundIcon="@drawable/fari_logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyAppln"
+        android:theme="@style/Theme.LoginPage"
         tools:targetApi="31">
 
         <activity
-            android:name=".MainActivity"
+            android:name="ir.ac.kntu.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DashboardActivity"></activity>
-        <activity android:name=".SignupActivity"></activity>
+
+        <activity android:name="ir.ac.kntu.SignupActivity" />
+        <activity android:name="ir.ac.kntu.DashBoardActivity" />
+        <activity android:name="ir.ac.kntu.ChargeAccountActivity" />
+        <activity android:name="ir.ac.kntu.TransferActivity" />
+        <activity android:name="ir.ac.kntu.ContactActivity" />
+        <activity android:name="ir.ac.kntu.LoanActivity" />
+        <activity android:name="ir.ac.kntu.LoanRequestActivity" />
+        <activity android:name="ir.ac.kntu.LoanManagementActivity" />
+        <activity android:name="ir.ac.kntu.LoanDetailsActivity" />
+        <activity android:name="ir.ac.kntu.PayInstallmentActivity" />
+
+
 
     </application>
 

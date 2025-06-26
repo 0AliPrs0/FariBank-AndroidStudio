@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="ir.ac.kntu.LoanManagementActivity"
+    android:padding="16dp">
+
+    <ListView
+        android:id="@+id/loanListView"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="100000dp"
+        android:choiceMode="singleChoice"
+        android:listSelector="@android:color/holo_blue_light"/>
+
+    <Button
+        android:id="@+id/viewDetailsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Details"/>
+
+    <Button
+        android:id="@+id/payInstallmentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay Installment"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

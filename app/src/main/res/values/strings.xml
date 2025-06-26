@@ -1,3 +1,22 @@
-<resources>
-    <string name="app_name">My Appln</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">LoginPage</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="login">Login</string>
+    <string name="telegram_id">Id:Aliprs84</string>
+    <string name="gmail">alip13840505@gamil.com</string>
+    <string name="first_name">first name</string>
+    <string name="last_name">last name</string>
+    <string name="phone_number">phone number</string>
+    <string name="back">Back</string>
+    <string name="contact">Contact us</string>
+    <string name="powered">powered by ali pooreskandar</string>
+    <string name="national_id">national id</string>
+    <string name="fari_bank">Fari Bank</string>
+    <string name="add_new_contact">Add new contact</string>
+    <string name="show_password">Show password\n</string>
+    <string-array name="installment_options">
+        <item>10</item>
+        <item>20</item>
+    </string-array>
 </resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashboard_background"
+    android:orientation="vertical"
+    tools:context="ir.ac.kntu.ChargeAccountActivity"
+    tools:ignore="ExtraText">
+
+
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="64dp"
+        android:layout_height="68dp"
+        app:srcCompat="@drawable/home"
+        android:layout_gravity="end"
+        tools:layout_editor_absoluteX="342dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="377dp"
+        android:layout_height="68dp"
+        android:text="Enter the amount of money"
+        android:textColor="#2196F3"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="135dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:padding="18dp"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="219dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/invalid"
+        android:layout_width="381dp"
+        android:layout_height="56dp"
+        android:textColor="#E80505"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="321dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/pay"
+        android:layout_width="407dp"
+        android:layout_height="97dp"
+        android:background="@drawable/rectangle"
+        android:backgroundTintMode="screen"
+        android:padding="18dp"
+        android:text="Pay"
+        android:textAllCaps="false"
+        android:textColor="#C4C6D3"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="398dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/successful"
+        android:layout_width="372dp"
+        android:layout_height="69dp"
+        android:textColor="#08B30F"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="529dp"
+        tools:ignore="MissingConstraints" />
+
+
+</LinearLayout>

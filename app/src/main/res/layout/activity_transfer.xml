@@ -1,122 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TransferActivity">
+    android:background="@drawable/dashboard_background"
+    android:orientation="vertical"
+    tools:context="ir.ac.kntu.ChargeAccountActivity"
+    tools:ignore="ExtraText">
+
 
     <ImageView
-        android:id="@+id/continueButton"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/background" />
-
-    <Button
-        android:id="@+id/transferWithContact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FFFFFF"
-        android:text="Contacts"
-        android:textAllCaps="true"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/transferWithRecent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/continueButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467" />
-
-    <Button
-        android:id="@+id/transferWithRecent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FFFFFF"
-        android:text="Reccent"
-        android:textAllCaps="true"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/transferWithContact"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467" />
-
-    <TextView
-        android:id="@+id/textView30"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="140dp"
-        android:gravity="center"
-        android:text="Card number:"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toStartOf="@+id/cardNumber"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/continueButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/home"
+        android:layout_width="64dp"
+        android:layout_height="68dp"
+        app:srcCompat="@drawable/home"
+        android:layout_gravity="end"
+        tools:layout_editor_absoluteX="342dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/cardNumber"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="140dp"
-        android:background="@drawable/rounded_corner"
-        android:ems="10"
-        android:gravity="center"
-        android:inputType="phone"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView30"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
+        android:id="@+id/account_num"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="Continue"
-        android:textAllCaps="true"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardNumber" />
+        android:textColor="#529DD8"
+        android:background="@drawable/rectangle"
+        android:hint="Account number"
+        android:textColorHint="@color/white"
+        android:inputType="number"
+        android:padding="18dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/money_amount"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle"
+        android:hint="Amount money"
+        android:inputType="number"
+        android:padding="18dp"
+        android:textColor="#EC6391"
+        android:textColorHint="@color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/check"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rectangle"
+            android:text="Check account"
+            android:textAllCaps="false"
+            android:textAppearance="@color/white"
+            android:textColor="#C4C6D3"
+            android:textSize="17sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="398dp" />
+
+        <Button
+            android:id="@+id/transfer"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rectangle"
+            android:text="Transfer"
+            android:textAllCaps="false"
+            android:textAppearance="@color/white"
+            android:textColor="#C4C6D3"
+            android:textSize="17sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="398dp" />
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/textView31"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:gravity="center"
-        android:textColor="#FF0000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardNumber"
-        app:layout_constraintVertical_bias="0.675" />
+        android:id="@+id/destination_account"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#42A89F"
+        android:textSize="30sp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView32"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:textColor="#FF0000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/transferWithRecent" />
+        android:id="@+id/not_money"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#CD1F12"
+        android:textSize="30sp"
+        tools:ignore="MissingConstraints" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

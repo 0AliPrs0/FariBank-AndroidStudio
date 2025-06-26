@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#A9B348"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="New contact information"
+        android:textColor="#43475A"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/firstNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle"
+        android:hint="First name"
+        android:padding="18dp"
+        android:inputType="text"
+        android:textColor="#C549A7"
+        android:textColorHint="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/lastNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle"
+        android:hint="Last name"
+        android:padding="18dp"
+        android:inputType="text"
+        android:textColor="#C549A7"
+        android:textColorHint="#FFFFFF"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:id="@+id/phoneNumberInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle"
+        android:hint="Phone number"
+        android:inputType="number"
+        android:padding="18dp"
+        android:textColor="#376081"
+        android:textColorHint="#FFFFFF"
+        android:layout_marginTop="15dp" />
+</LinearLayout>
